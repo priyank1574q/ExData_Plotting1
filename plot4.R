@@ -15,7 +15,7 @@ with(data, plot(datetime, Voltage, type = "l"))
 with(data, plot(datetime, Sub_metering_1, type = "l", lty = 1, col = "black", xlab = "", ylab = "Energy sub metering"))
 with(data, lines(datetime, Sub_metering_2, col = "red", lty = 1))
 with(data, lines(datetime, Sub_metering_3, col = "blue", lty = 1))
-legend("topright", lty = 1, col = c("black","red","blue"), legend = c("Sub_m_1","Sub_m_2","Sub_m_3"))
+legend("topright", lty = 1, col = c("black","red","blue"), legend = c("Sub_m_1","Sub_m_2","Sub_m_3"), bty = "n")
 
 with(data, plot(datetime, Global_reactive_power, type = "l"))
 
