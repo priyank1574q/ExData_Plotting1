@@ -5,7 +5,7 @@ data[,3:9] <- sapply(data[,3:9], function(f) as.numeric(as.character(f)))
 data$datetime <- apply(data[,1:2], 1, paste, collapse=" ") %>% strptime(format = "%d/%m/%Y %H:%M:%S")
 data <- data[,3:10]
 
-with(data, plot(datetime, Global_active_power, type = "l", lty = 1, main = "", xlab = "", ylab = "Global Active Power (kilowatts)"))
+with(data, plot(datetime, Global_active_power, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)"))
 
 dev.copy(png, file = "plot2.png")
 dev.off()
