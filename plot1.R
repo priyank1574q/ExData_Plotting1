@@ -13,7 +13,7 @@ data[,3:9] <- sapply(data[,3:9], function(f) as.numeric(as.character(f)))
 # A new variable 'datetime' was made which stores the data as well as time as a single value.
 data$datetime <- apply(data[,1:2], 1, paste, collapse=" ") %>% strptime(format = "%d/%m/%Y %H:%M:%S")
 
-#The required data was subsetted again after mutating the data frame.
+# The required data was subsetted again after mutating the data frame.
 data <- data[,3:10]
 
 # Histogram plot was made of 'Global_active_power' to get the required graph.
